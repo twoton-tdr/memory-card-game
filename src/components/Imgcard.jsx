@@ -1,8 +1,8 @@
 function ImgCard({cardData,setHigh,setCurrent,high,current,setCardData}){
-    console.log(cardData)
+    // console.log(cardData)
     function imgClicked(id){
         cardData.map((data)=>{
-            console.log(data);
+            // console.log(data);
             if(data.id === id){
                 if(data.clicked){
                     
@@ -22,7 +22,7 @@ function ImgCard({cardData,setHigh,setCurrent,high,current,setCardData}){
     function reshuffle(id="",click){
         setCardData((prev)=>{
  
-            console.log("Before shuffle:", prev);
+            // console.log("Before shuffle:", prev);
             let shuffled = [...prev];
             
         
@@ -54,7 +54,7 @@ function ImgCard({cardData,setHigh,setCurrent,high,current,setCardData}){
         
     }
     return cardData.map((img)=>{
-        console.log(cardData)
+        
         return (
         <div className="img-card" key={img.id} onClick={()=>imgClicked(img.id)} >
             {!img.loaded && <div className="img-loader"><span class="line-md--loading-loop"></span></div>}
